@@ -62,6 +62,10 @@ input[type='text']:focus {
   border-radius: 5px;
 }
 
+.filtered {
+  display: none;
+}
+
 ul .todo {
   background: #423a6f;
 }

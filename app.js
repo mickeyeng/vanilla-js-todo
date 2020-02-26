@@ -2,7 +2,7 @@ console.log('working!');
 
 const addTodo = document.querySelector('.add');
 const list = document.querySelector('.todos');
-const search = document.querySelector('.search');
+const search = document.querySelector('.search input');
 
 const generateTemplate = todo => {
   const html = `
@@ -31,6 +31,20 @@ list.addEventListener('click', e => {
   }
 });
 
+const filterTodos = term => {
+  // don't match term and add class filtered
+  Array.from(list.children)
+    .filter(todo => !todo.textContent.toLowerCase.includes(term))
+    .forEach(todo => todo.classList.add('filtered'));
+
+  // do match term and remove class filtered
+  Array.from(list.children)
+    .filter(todo => todo.textContent.toLowerCase.includes(term))
+    .forEach(todo => todo.classList.remove('filtered'));
+};
+
 search.addEventListener('keyup', e => {
-  console.log(e.target.value);
+  const term = search.value.trim().toLowerCase();
+  console.log(term);
+  filterTodos(term);
 });

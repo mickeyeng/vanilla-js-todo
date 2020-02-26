@@ -13,13 +13,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      <link
-      rel="stylesheet"
-      href="./style.css"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
     />
+
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="container">
+      <header>
+        <h1>Todo List</h1>
+        <form class="search">
+          <input type="text" name="search" placeholder="search todos" />
+        </form>
+      </header>
+
+      <ul>
+        <li class="todo">
+          <span>play Mario kart</span>
+          <i class="far fa-trash-alt delete"></i>
+        </li>
+        <li class="todo">
+          <span>Defeat Ganon in Zelda</span>
+          <i class="far fa-trash-alt delete"></i>
+        </li>
+        <li class="todo">
+          <span>make a veggie pie</span>
+          <i class="far fa-trash-alt delete"></i>
+        </li>
+      </ul>
+
+      <form class="add">
+        <label>Add a new todo...</label>
+        <input class="form-control" type="text" name="add" />
+      </form>
+    </div>
     <script src="./app.js" async defer></script>
   </body>
 </html>

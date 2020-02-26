@@ -1,3 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
 * {
   box-sizing: border-box;
+}
+
+body {
+  background: #352f5b;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  /* margin-bottom: 4px; */
+  color: white;
+}
+.search {
+  width: 100%;
+}
+
+.search input {
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+input[type='text'],
+input[type='text']:focus {
+  color: #fff;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  /* max-width: 400px; */
+}
+
+.todo {
+  color: white;
+  padding: 20px;
+  margin: 5px 0;
+  /* border-bottom: 1px solid white; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+ul .todo {
+  background: #423a6f;
+}
+
+.delete {
+  cursor: pointer;
+}
+
+.add {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.add label {
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.add input[type='text'] {
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
 }

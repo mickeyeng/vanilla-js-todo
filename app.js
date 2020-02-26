@@ -2,6 +2,7 @@ console.log('working!');
 
 const addTodo = document.querySelector('.add');
 const list = document.querySelector('.todos');
+const search = document.querySelector('.search');
 
 const generateTemplate = todo => {
   const html = `
@@ -22,4 +23,14 @@ addTodo.addEventListener('submit', e => {
     generateTemplate(todo);
     addTodo.reset();
   }
+});
+
+list.addEventListener('click', e => {
+  if (e.target.classList.contains('delete')) {
+    e.target.parentElement.remove();
+  }
+});
+
+search.addEventListener('keyup', e => {
+  console.log(e.target.value);
 });
